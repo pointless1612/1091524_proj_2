@@ -1,0 +1,51 @@
+---------------------------------------------------- Input1
+
+	li R2,0
+	li R3,4
+	li R4,0
+LoopI:
+	beq R4,R3,EndLoopI
+	li R5,0
+LoopJ:
+	beq R5,R3,EndLoopJ
+	add R6,R5,R4
+	andi R6,R6,3
+	addi R5,R5,1
+	beq R0,R0,LoopJ
+EndLoopJ:
+	addi R4,R4,1
+	beq R0,R0,LoopI
+EndLoopI:
+
+----------------------------------------------------Input2
+
+	li R2,2
+	li R3,1
+	blt R2,R3,If
+	bne R0,R2,Else
+If:
+	and R4,R2,R3
+	or R5,R2,R3
+	bge R3,R2,End
+Else:
+	add R1,R2,R3
+	xor R4,R1,R3
+	xor R5,R1,R2
+End:
+
+----------------------------------------------------Input3
+	
+	addi R1,R0,5
+	addi R2,R0,0
+Loop:
+	beq R1,R2,End
+	addi R2,R2,1
+	sub R3,R3,R2
+	beq R0,R0,Loop
+End:
+
+
+
+
+
+
